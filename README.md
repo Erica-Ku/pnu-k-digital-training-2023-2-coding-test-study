@@ -2,11 +2,8 @@
 
 <br/>
 
-## Week04 과제 
-### 각 알고리즘 분류별로 2문제 이상 푸시면 됩니다.
-### [백준 그리디알고리즘](https://www.acmicpc.net/problemset?sort=ac_desc&algo=33)
-### [백준 정렬](https://www.acmicpc.net/problemset?sort=ac_desc&algo=97)
-### [백준 이분 탐색](https://www.acmicpc.net/problemset?sort=ac_desc&algo=12)
+## Week05 과제 
+### [백준 그래프와 순회 단계별로 풀어보기](https://www.acmicpc.net/step/24)
 
 <br /> 
 
@@ -29,15 +26,14 @@
 
 ## 이번 주 정기 스터디 시간에 풀 문제
 ##### 매주 화요일 업데이트!
-- [백준 1541 잃어버린 괄호](https://www.acmicpc.net/problem/1541)
-- [백준 10814 나이순 정렬](https://www.acmicpc.net/problem/10814)
-- [백준 1920 수 찾기](https://www.acmicpc.net/problem/1920)
+- [백준 2178 미로탐색](https://www.acmicpc.net/problem/2178)
+- [백준 24479 알고리즘 수업-깊이 우선 탐색1](https://www.acmicpc.net/problem/24479)
 
 <br />
 
 ## 이번 주 과제 
 > 백준 
-- 그리디 알고리즘, 정렬, 이분탐색 각 2
+- 그래프와 순회
 > 프로그래머스
 - Lv.1 하루 2문제 
 
@@ -72,6 +68,7 @@
 |Week03|2023.04.18 ~ 2023.04.24|07 이진 탐색|이분 탐색|
 |Week04|2023.04.25 ~ 2023.05.01|중간 점검|그리디, 정렬, 이분 탐색|
 |Week05|2023.05.02 ~ 2023.05.08|05 DFS/BFS|그래프와 순회|
+|Week06|2023.05.09 ~ 2023.05.15|08 다이나믹 프로그래밍|동적 계획법1|
 
 <br/>
 
